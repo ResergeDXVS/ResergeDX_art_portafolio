@@ -1,0 +1,49 @@
+.footer{
+    @include flexbox_column(flex-end,center);
+    margin-top: 1rem;
+    gap: px-to-rem(8);
+    background-color: $primaryColor;
+    @include media_adjustments{
+        gap: px-to-rem(16);
+        padding: 1rem 0;
+    }
+    @include phone_adjustments{
+        gap: px-to-rem(16);
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+    .footer__data{
+        p{
+            @extend %normal__text;
+            color: $whiteColor;
+            font-size: px-to-rem(12);
+            margin: 0;
+            padding: 0;
+            @include media_adjustments{
+                font-size: px-to-rem(16);
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(20);
+            }
+        }
+    }
+    .footer__page{
+        p{
+            @extend %normal__text;
+            color: $whiteColor;
+            font-size: px-to-rem(12);
+            margin: 0;
+            padding: 0;
+            @include media_adjustments{
+                font-size: px-to-rem(16);
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(20);
+            }
+            a{
+                @extend %a_text_format;
+                color: $primaryTextColor;
+            }
+        }
+    }
+}

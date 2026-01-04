@@ -1,0 +1,91 @@
+@mixin flexbox_row($justify, $align) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flexbox_column($justify, $align){
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin image_format($tipo, $modo) {
+    // Valores base
+    $border: null;
+    $radius: null;
+    $width: null;
+    $height: auto;
+
+    // Ajustes según modo
+    @if $modo == pc {
+        @if $tipo == photo {
+            $border: .5rem solid $whiteColor;
+            $radius: 50%;
+            $width: 125px;
+            $height: 125px;
+        } @else if $tipo == retrato {
+            $width: 300px;
+        } @else if $tipo == poster {
+            $width: 100%;
+            $radius: $borderRadius;
+        }
+    } @else if $modo == medio {
+        @if $tipo == photo {
+            $border: .5rem solid $whiteColor;
+            $radius: 50%;
+            $width: 110px;
+            $height: 110px;
+        } @else if $tipo == retrato {
+            $width: 400px;
+        } @else if $tipo == poster {
+            $width: 100%;
+            $radius: $borderRadius;
+        }
+    } @else if $modo == phone {
+        @if $tipo == photo {
+            $border: .25rem solid $whiteColor;
+            $radius: 50%;
+            $width: 90px;
+            $height: 90px;
+        } @else if $tipo == retrato {
+            $width: 600px;
+        } @else if $tipo == poster {
+            $width: 100%;
+            $radius: $borderRadius;
+        }
+    }
+
+    @if $border { border: $border; }
+    @if $radius { border-radius: $radius; }
+    @if $width { width: $width; }
+    @if $height { height: $height; }
+    @if $tipo == poster { object-fit: cover; }
+}
+
+
+
+
+@function px-to-rem($px, $base: 16) {
+    @return calc($px / $base) * 1rem;
+}
+
+
+@function light_text($color, $amount: 15%) {
+    @return lighten($color, $amount);
+}
+
+@mixin media_adjustments{
+    @media screen and (max-width:1200px) and (min-width:768px){
+        @content;
+    }
+}
+
+@mixin phone_adjustments{
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+

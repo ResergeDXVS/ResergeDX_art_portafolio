@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css">
+    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css">
+
+
+    <link rel="stylesheet" href="scss/main.css">
+    <title>Portafolio Reserge DX</title>
+</head>
+<body>
+    <header class="header">
+        <!-- Uso de navegador navbar -->
+        <ul class="nav" id="header__menu">
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <p>Portafolio</p>
+                    <i class="fi fi-sr-palette"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">
+                    <p>Acerca de</p>
+                    <i class="fi fi-sr-file-user"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="comisions.html">
+                    <p>Comisiones</p>
+                    <i class="fi fi-sr-pencil-paintbrush"></i>
+                </a>
+            </li>
+        </ul>
+        <div id="header__photo">
+            <img src="img/photos/digital/Retrato.png">
+        </div>
+        <ul class="nav justify-content-end" id="header__networks">
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.facebook.com/profile.php?id=100066755858959">
+                    <i class="fi fi-brands-facebook"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.instagram.com/resergedx/">
+                    <i class="fi fi-brands-instagram"></i>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <body>
+        <section class="card biography">
+            <!-- Carousel dentro del card -->
+            <div id="carousel__images" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/photos/digital/Reserge.png"/>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/photos/digital/Lucy.png"/>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/photos/fanart/MOMO Y OKARUN.png"/>
+                    </div>
+                </div>
+            </div>
+            <!-- Overlay del card -->
+            <div class="card-img-overlay">
+                <h5 class="card-title biography__name">ResergeDX</h5>
+                <p class="card-text biography__text">
+                    La creación es el alma materializandose.
+                </p>
+            </div>
+        </section>
+
+        
+        <section class="portafolio">
+            <nav id="portafolio__navbar" class="navbar px-5">
+                <ul class="nav nav-pills">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#original_design">Diseños Originales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fanart">Fanart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#traditional_artwork">Trabajo Tradicional</a>
+                    </li>
+                </ul>
+            </nav>
+            <div data-bs-spy="scroll"
+                data-bs-target="#portafolio__navbar"
+                data-bs-smooth-scroll="true"
+                data-bs-offset="20"
+                class="scrollspy-example bg-body-tertiary p-3 rounded-2"
+                tabindex="0"
+                id="portafolio__prints">
+
+
+                <article  class="portafolio__section" id="original_design">
+                    <div class="portafolio__title" >
+                        <h2 >Diseños Originales</h2>
+                    </div>
+                    <div class="portafolio__gallery">
+                        <div class="portafolio__image">
+                            <img src="img/photos/digital/Lucy.png">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/digital/Reserge.png">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/digital/Rhadex.png">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/digital/Retrato.png">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/digital/Ryze.png">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/digital/UpMind.png">
+                        </div>
+                        
+                    </div>
+                </article>
+                <article  class="portafolio__section" id="fanart">
+                    <div class="portafolio__title" >
+                        <h2 >Fanarts</h2>
+                    </div>
+                    <div class="portafolio__gallery">
+                        <div class="portafolio__image">
+                            <img src="img/photos/fanart/DARK FANART.png">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/fanart/Dua Lipa Radical Optimism.png">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/fanart/DUALITY TOUR INSTAGRAM.png">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/fanart/KPOP DEMON HUNTERS.png">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/fanart/MOMO Y OKARUN.png">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/fanart/Titan Luz.jpeg">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/fanart/Xayah.png">
+                        </div>
+
+                    </div>
+                </article>
+                <article  class="portafolio__section" id="traditional_artwork">
+                    <div class="portafolio__title" >
+                        <h2 >Trabajos Originales</h2>
+                    </div>
+                    <div class="portafolio__gallery">
+                        <div class="portafolio__image">
+                            <img src="img/photos/traditional/Desahogamiento.jpg">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/traditional/Dia de muertos.jpg">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/traditional/Estoy solo o solo soy yo.jpg">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/traditional/Marioneta.jpg">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/traditional/Navidad.jpg">
+                        </div>
+                        <div class="portafolio__image">
+                            <img src="img/photos/traditional/Neon.jpg">
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+    </body>
+    <footer class="footer">
+        <section class="footer__data mt-3">
+            <p>&copy; 2025 ResergeDX. Todos los derechos reservados.</p>
+        </section>
+        <section class="footer__page my-1">
+            <p>P&aacute;gina realizada por <a href="">Sergio Reza</a></p>
+        </section>
+    </footer>
+</body>
+</html>

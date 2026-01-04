@@ -1,0 +1,189 @@
+.commisions{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    @include phone_adjustments{
+        padding: 2.5rem;
+    }
+    .commisions__title{
+        width: 100%;
+        padding: 1rem;
+        background-color: $secondaryColor;
+        border-radius: $borderRadius;
+        h2{
+            @extend %h2__format;
+            @include media_adjustments{
+                font-size: $mediaText;
+            }
+            @include phone_adjustments{
+                font-size: $phoneText;
+            }
+        }
+    }
+    #commision__work{
+        padding: 1rem 2rem;
+        width: 100%;
+        .commision__item{
+            .accordion-header{
+                margin: 0;
+                text-align: left;
+                button{
+                    @extend %bold__text; 
+                    background-color: $primaryColor;
+                    color: $whiteColor; 
+                    font-size: px-to-rem(28);
+                    @include media_adjustments{
+                        font-size: px-to-rem(24);
+                    }
+                    @include phone_adjustments{
+                        font-size: px-to-rem(20);
+                    }
+                }
+            }
+            .commition__description{
+                .accordion-body{
+                    @include flexbox_column(center,center);
+                    padding: 2%;
+                    gap:1rem;
+                    .card{
+                        box-sizing: border-box;
+                        width: 100%;
+                        height: auto;
+                        padding: 1rem;
+                        .row{
+                            .card__image{
+                                @include flexbox_row(center,center);
+                                img{
+                                    max-width: 375px;
+                                    aspect-ratio: 3/4;
+                                    height: auto;
+                                    border-radius: 8px;
+                                    @include media_adjustments{
+                                        aspect-ratio: 2/3;
+                                    }
+                                    @include phone_adjustments{
+                                        font-size: px-to-rem(20);
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                            .card__info{
+                                .card-body{
+                                    h5{
+                                        @extend %bold__text;
+                                        color:$primaryTextColor;
+                                        font-size: px-to-rem(28);
+                                        text-align: left;
+                                        @include media_adjustments{
+                                            font-size: px-to-rem(24);
+                                        }
+                                        @include phone_adjustments{
+                                            font-size: px-to-rem(20);
+                                            text-align: center;
+                                        }
+                                    }
+                                    ul{
+                                        list-style-type: disc;
+                                        color:$primaryTextColor;
+                                        p{
+                                            @extend %normal__text;
+                                            color:$primaryTextColor;
+                                            font-size: px-to-rem(18);
+                                            text-align: left;
+                                            line-height: 2.0rem;
+                                            @include media_adjustments{
+                                                font-size: px-to-rem(16);
+                                                line-height: 1.5rem;
+                                            }
+                                            @include phone_adjustments{
+                                                font-size: px-to-rem(16);
+                                                text-align: justify;
+                                                line-height: 1.5rem;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.form{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    @include phone_adjustments{
+        padding: 2.5rem;
+    }
+    .form__title{
+        width: 100%;
+        padding: 1rem;
+        background-color: $secondaryColor;
+        border-radius: $borderRadius;
+        h2{
+            @extend %h2__format;
+            @include media_adjustments{
+                font-size: $mediaText;
+            }
+            @include phone_adjustments{
+                font-size: $phoneText;
+            }
+        }
+    }
+    .form__description{
+        width: 100%;
+        padding: 1rem;
+        p{
+            margin: 0;
+            @extend %normal__text;
+            font-size: px-to-rem(20);
+            text-align: justify;
+            color: $primaryTextColor;
+            line-height: 1.8rem;
+            @include media_adjustments{
+                font-size: px-to-rem(16);
+                line-height: 1.6rem;
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(16);
+                line-height: 1.6rem;
+            }
+        }
+    }
+    .form__form{
+        background-color: $primaryColor;
+        border-radius: $borderRadius;
+        margin:1% 5%;
+        padding: 2rem;
+        
+        @include media_adjustments{
+            margin:1% 4%;
+            padding: 2rem;
+        }
+        @include phone_adjustments{
+            margin:1% 2%;
+            padding: 1.5rem;
+        }
+        
+    }
+    .form__send{
+        padding:1rem;
+        .btn{
+            background-color: $secondaryColor;
+            color:$whiteColor;
+            font-size: px-to-rem(24);
+            @include media_adjustments{
+                font-size: px-to-rem(20);
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(20);
+            }
+        }
+    }
+}

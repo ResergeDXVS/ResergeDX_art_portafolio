@@ -1,0 +1,49 @@
+
+$primaryColor:#4755c1;
+$secondaryColor: #c991f6;
+$primaryTextColor: #41114f;
+$secondaryTextColor: #7363a6;
+$whiteColor:#e4dbff;
+
+$fontFamily: "Goldman", sans-serif;
+$transition_ease: background-color 0.3s ease;
+
+$borderRadius: 0.8rem;
+
+$normalText:2rem;
+$mediaText:1.8rem;
+$phoneText:1.6rem;
+
+%normal__text{
+    font-family: $fontFamily;
+    font-weight: 400;
+    font-style: normal;
+}
+
+%bold__text{
+    font-family: $fontFamily;
+    font-weight: 700;
+    font-style: normal;
+}
+
+%a_text_format{
+    font-family: $fontFamily;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+%h2__format{
+    @extend %bold__text;
+    color:$whiteColor;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+%i__format{
+    color: $whiteColor;
+    font-size: 2rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}

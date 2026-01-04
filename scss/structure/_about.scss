@@ -1,0 +1,78 @@
+#about{
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 2rem 5rem;
+    @include phone_adjustments{
+        padding: 2.5rem 7rem;
+    }
+    #about__title{
+        width: 100%;
+        padding: 1rem;
+        background-color: $secondaryColor;
+        border-radius: $borderRadius;
+        h2{
+            @extend %h2__format;
+            @include media_adjustments{
+                font-size: $mediaText;
+            }
+            @include phone_adjustments{
+                font-size: $phoneText;
+            }
+        }
+    }
+    #about__structure{
+        #about__profile{
+            img{
+                aspect-ratio: 3/4;
+                height: auto;
+                border-radius: 8px;
+                @include media_adjustments{
+                     aspect-ratio: 2/3;
+                }
+                @include phone_adjustments{
+                    font-size: px-to-rem(20);
+                    text-align: center;
+                }
+            }
+        }
+        #about__text{
+            .card-body{
+                
+                h5{
+                    @extend %bold__text;
+                    color:$primaryTextColor;
+                    font-size: px-to-rem(28);
+                    text-align: left;
+                    @include media_adjustments{
+                        font-size: px-to-rem(24);
+                    }
+                    @include phone_adjustments{
+                        font-size: px-to-rem(20);
+                        text-align: center;
+                    }
+                }
+                ul{
+                    list-style-type: disc;
+                    color:$primaryTextColor;
+                    p{
+                        @extend %normal__text;
+                        color:$primaryTextColor;
+                        font-size: px-to-rem(20);
+                        text-align: left;
+                        line-height: 2.0rem;
+                        @include media_adjustments{
+                            font-size: px-to-rem(16);
+                            line-height: 1.5rem;
+                        }
+                        @include phone_adjustments{
+                            font-size: px-to-rem(16);
+                            text-align: justify;
+                            line-height: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

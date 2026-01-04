@@ -1,0 +1,130 @@
+*{
+    font-family: $fontFamily;
+    font-size: 16px;
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+.header{
+    @include flexbox_row(space-around,center);
+    width: 100%;
+    height: 150px;
+    padding: 1rem 2%;
+    box-sizing: border-box;
+    background-color: $primaryColor;
+    @include media_adjustments{
+        padding: 0.75rem 2%;
+        height: 125px;
+    }
+    @include phone_adjustments{
+        padding: 0.5rem 2%;
+        height: 125px;
+    }
+
+    #header__menu{
+        @include flexbox_row(flex-start,center);
+        width: 100%;
+        height: auto;
+        padding: 12px;
+        margin: 0;
+        box-sizing: border-box;
+        gap:18px;
+        @include media_adjustments{
+            padding: 8px;
+            gap:14px;
+        }
+        @include phone_adjustments{
+            padding: 16px;
+            gap:32px;
+        }
+
+        > li{
+            a{
+                margin: 0;
+                padding: 0;
+                p{
+                    @extend %a_text_format;
+                    color: $whiteColor;
+                    font-size: px-to-rem(24);
+                    margin: 0;
+                    padding: 0;
+                    @include media_adjustments{
+                        font-size: px-to-rem(18);
+                    }
+                    @include phone_adjustments{
+                        display: none;
+                    }
+                }
+                i {
+                    display: none;     // oculto por defecto
+                    @extend %i__format;
+                    font-size: px-to-rem(32);
+
+                    @include phone_adjustments {
+                        display: block;  // visible solo en pantallas <900px
+                    }
+                }
+
+                
+            }
+            
+        }
+    }
+    #header__photo{
+        @include flexbox_row(center,center);
+        width: 400px;
+        height: auto;
+        margin: 1rem;
+        @include media_adjustments{
+            width: 150px;
+            margin: 0.75rem;
+        }
+        @include phone_adjustments{
+            width: 120px;
+            margin: .5rem;
+        }
+        img{
+            @include image_format(photo,pc);
+            @include media_adjustments{
+                @include image_format(photo,medio);
+            }
+            @include phone_adjustments{
+                @include image_format(photo,phone);
+            }
+        }
+    }
+    #header__networks{
+        @include flexbox_row(flex-end,center);
+        width: 100%;
+        height: auto;
+        padding: 0 ;
+        margin: 0;
+        box-sizing: border-box;
+        gap: px-to-rem(24);
+        @include media_adjustments{
+            padding: 8px;
+            gap:14px;
+        }
+        @include phone_adjustments{
+            padding: 16px;
+            gap:32px;
+        }
+        .nav-item{
+            .nav-link{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                i{
+                    @extend %i__format;
+                    font-size: px-to-rem(32);
+                }
+            }
+        }
+    }
+}

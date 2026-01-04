@@ -1,0 +1,200 @@
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.biography {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    @include media_adjustments{
+        height: 25vh;
+    }
+    @include phone_adjustments{
+        height: 20vh;
+    }
+    #carousel__images {
+        height: 100%;
+        overflow: hidden;
+
+        .carousel-inner {
+            height: 100%;
+
+            .carousel-item {
+                height: 100%;
+                background-color: $primaryTextColor;
+                img {
+                    position: relative;
+                    z-index: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    filter: brightness(55%);
+
+                }
+            }
+
+            .carousel-item:nth-child(1) img {
+                object-position: 50% 25%;
+            }
+
+            .carousel-item:nth-child(2) img {
+                object-position: 50% 20%;
+            }
+
+            .carousel-item:nth-child(3) img {
+                object-position: 50% 45%;
+            }
+        }
+    }
+
+    .card-img-overlay{
+        @include flexbox_column(center,center);
+        gap: 12px;
+        .biography__name{
+            @extend %bold__text;
+            font-size: px-to-rem(80);
+            color: $whiteColor;
+            @include media_adjustments{
+                font-size: px-to-rem(68);
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(56);
+            }
+        }
+        .biography__text{
+            @extend %bold__text;
+            font-size: px-to-rem(28);
+            color: $whiteColor;
+            @include media_adjustments{
+                font-size: px-to-rem(24);
+            }
+            @include phone_adjustments{
+                font-size: px-to-rem(20);
+            }
+        }
+    }
+}
+
+.portafolio{
+    #portafolio__navbar{
+        @include flexbox_row(center,center);
+        width: 100%;
+        background-color: $secondaryColor;
+        @include media_adjustments{
+            padding: 1rem 2rem;
+        }
+        @include phone_adjustments{
+            padding: .75rem 1rem;
+        }
+        ul{
+            gap: px-to-rem(18);
+            .nav-item{
+                background-color: $whiteColor;
+                border-radius: $borderRadius;
+                
+                a{
+                    @extend %normal__text;
+                    font-size: px-to-rem(24);
+                    color: $primaryTextColor;
+                    @include media_adjustments{
+                        font-size: px-to-rem(20);
+                    }
+                    @include phone_adjustments{
+                        font-size: px-to-rem(16);
+                    }
+                }
+            }
+        }
+    }
+    #portafolio__prints{
+        scroll-snap-type: y;
+        overflow-y: scroll;
+        height: 80vh;
+        padding: 2%;
+
+
+        @include phone_adjustments{
+            scroll-snap-type: none;
+            overflow-y: none;
+        }
+        .portafolio__section{
+            @include flexbox_column(center,center);
+            scroll-snap-align: start;
+            width: 100%;
+            padding-top: 1rem;
+            
+            .portafolio__title{
+                width: 100%;
+                background-color: $secondaryColor;
+                border-radius: $borderRadius;
+                margin: 12px;
+                padding:12px 0;
+                @include media_adjustments{
+                    margin: 16px;
+                }
+                @include phone_adjustments{
+                    margin: 16px;
+                }
+                h2{
+                    @extend %h2__format;
+                    @include media_adjustments{
+                        font-size: $mediaText;
+                    }
+                    @include phone_adjustments{
+                        font-size: $phoneText;
+                    }
+                }
+            }
+            .portafolio__gallery{
+                margin: 0 5%;
+                display: grid;
+                grid-template-columns: repeat(3, .75fr);
+                grid-auto-rows: 1fr;
+                gap: 3rem;
+                padding: 1rem;
+                @include media_adjustments{
+                    margin: 0 2%;
+                    grid-template-columns: repeat(3, .9fr);
+                    gap: 2rem;
+                }
+                @include phone_adjustments{
+                    margin: 0 2%;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 1rem;
+                }
+                .portafolio__image{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    padding: 1rem;
+                    background-color: $primaryColor;
+                    border-radius: $borderRadius;
+                    @include media_adjustments{
+                        padding: .25rem;
+                    }
+                    @include phone_adjustments{
+                        padding: .25rem;
+                    }
+                    img{
+                        @include image_format(poster,pc);
+                        @include media_adjustments{
+                            @include image_format(poster,medio);
+                        }
+                        @include phone_adjustments{
+                            @include image_format(poster,phone);
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+}
