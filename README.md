@@ -1,4 +1,4 @@
-# 🎨 ResergeDX Art Portfolio
+# 🎨 ReSergeDX's Art Portfolio - SCCS Project
 
 ## 📖 Description
 Art portfolio website for the ResergeDX account. It showcases the artist's work and is organized into three pages: a home page with the gallery, an "About" page, and a "Commissions" page for people interested in requesting custom artwork. It is a static site built with HTML and SCSS/CSS, with no frameworks or build tools required.
